@@ -1,15 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void calculateMealPrice(double listedMealPrice, double tipRate, double taxRate) {
+    public static double calculateMealPrice(double listedMealPrice, double tipRate, double taxRate) {
         double tip = tipRate * listedMealPrice;
         double tax = taxRate * listedMealPrice;
         double result = listedMealPrice + tip + tax;
-
-        System.out.println("Your total meal price is: " + result);
+        return result;
     }
+
     public static void main(String[] args) {
-        calculateMealPrice(15, .2, .08);
+        double groupTotalMealPrice = calculateMealPrice(150, .2, .08);
+        System.out.println(groupTotalMealPrice);
+
+        double individualMealPrice = groupTotalMealPrice / 5;
+        System.out.println("Each persons bill is: " + individualMealPrice);
     }
 
 }
