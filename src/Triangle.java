@@ -1,4 +1,7 @@
 public class Triangle {
+
+    static int numOfSides = 3;
+
     double base;
     double height;
     double sideLengthOne;
@@ -13,7 +16,7 @@ public class Triangle {
         this.sideLengthTwo = sideLengthTwo;
         this.sideLengthThree = sideLengthThree;
     }
-
+    // Instance Method of Triangle
     public double findArea() {
         return (this.base * this.height) / 2;
     }
